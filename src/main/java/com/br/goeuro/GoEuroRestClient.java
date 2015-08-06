@@ -98,9 +98,9 @@ public class GoEuroRestClient {
 	}
 
 	public static void main(String[] args) {
-		if (args[0]==null) {
+		if (args.length==0) {
 			logger.error("Missing country parameter");
-			
+			System.exit(0);
 		}
 		String csvFileName = "cities_location_info.csv";
 		GoEuroRestClient restClient = new GoEuroRestClient();
